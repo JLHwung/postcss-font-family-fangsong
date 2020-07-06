@@ -4,26 +4,25 @@
 [![CSS Standard][css-img]][css-url]
 [![Gitter Chat][git-img]][git-url]
 
-[简体中文](./README-zh-hans.md)
+[English](./README.md)
 
-[postcss-font-family-fangsong] lets you use `fangsong` in CSS, following the
-[CSS Fonts Module Level 4] specification.
+[postcss-font-family-fangsong]让你可以使用在[CSS Fonts Module Level 4]定义的通用字体族`fangsong`。
 
 ```css
 body {
   font: 16pt/28pt fangsong;
 }
 
-/* becomes */
+/* 转译为 */
 
 body {
   font: 16pt/28pt fangsong, STFangsong, FangSong, FangSong_GB2312;
 }
 ```
 
-## Usage
+## 用法
 
-Add [postcss-font-family-fangsong] to your build tool:
+安装[postcss-font-family-fangsong]开发依赖：
 
 ```bash
 npm install postcss-font-family-fangsong --save-dev
@@ -31,30 +30,30 @@ npm install postcss-font-family-fangsong --save-dev
 
 #### PostCSS
 
-Add [PostCSS] to your build tool:
+安装[PostCSS]开发依赖：
 
 ```bash
 npm install postcss --save-dev
 ```
 
-Use [postcss-font-family-fangsong] as a plugin:
+将[postcss-font-family-fangsong]添加为PostCSS插件：
 
 ```js
 import postcss from "gulp-postcss";
 import postcssFontFangsong from "postcss-font-family-fangsong";
 
-postcss([postcssFontFangsong(/* options */)]).process(YOUR_CSS);
+postcss([postcssFontFangsong(/* 选项 */)]).process(YOUR_CSS);
 ```
 
 #### Gulp
 
-Add [Gulp PostCSS] to your build tool:
+安装[Gulp PostCSS]开发依赖：
 
 ```bash
 npm install gulp-postcss --save-dev
 ```
 
-Use [postcss-font-family-fangsong] in your Gulpfile:
+在Gulpfile中使用[postcss-font-family-fangsong]：
 
 ```js
 import postcss from "gulp-postcss";
@@ -63,20 +62,20 @@ import postcssFontFangsong from "postcss-font-family-fangsong";
 gulp.task("css", () =>
   gulp
     .src("./src/*.css")
-    .pipe(postcss([postcssFontFangsong(/* options */)]))
+    .pipe(postcss([postcssFontFangsong(/* 选项 */)]))
     .pipe(gulp.dest("."))
 );
 ```
 
 #### Grunt
 
-Add [Grunt PostCSS] to your build tool:
+安装[Grunt PostCSS]开发依赖：
 
 ```bash
 npm install grunt-postcss --save-dev
 ```
 
-Use [postcss-font-family-fangsong] in your Gruntfile:
+在Gruntfile中使用[postcss-font-family-fangsong]：
 
 ```js
 import postcssFontFangsong from "postcss-font-family-fangsong";
@@ -86,7 +85,7 @@ grunt.loadNpmTasks("grunt-postcss");
 grunt.initConfig({
   postcss: {
     options: {
-      use: [postcssFontFangsong(/* options */)],
+      use: [postcssFontFangsong(/* 选项 */)],
     },
     dist: {
       src: "*.css",
@@ -97,7 +96,7 @@ grunt.initConfig({
 
 #### Node
 
-Use [postcss-font-family-fangsong] to process your CSS:
+使用[postcss-font-family-fangsong]处理CSS文件：
 
 ```js
 import postcssFontFangsong from "postcss-font-family-fangsong";
@@ -105,33 +104,31 @@ import postcssFontFangsong from "postcss-font-family-fangsong";
 postcssFontFangsong.process(YOUR_CSS);
 ```
 
-## Options
+## 选项
 
 ### family
 
-The `family: string | string[]` option defines the fallback families used to polyfill `fangsong`.
-It accepts an array or a comma-separated string.
+`family: string | string[]`选项指定用来替换`fangsong`的一系列字体家族属性。它可以是字体族组成的数组，也可以是逗号分割的一组字体族。
 
 ```js
 import postcssFontFangsong from "postcss-font-family-fangsong";
 
 postcssFontFangsong({
-  family: "fangsong, FangSong, FZFangSong-Z02, FandolFang",
+  family: "fangsong, FangSong, FZFangSong-Z02, FandolFang", // 指定将fangsong替换成fangsong，中易仿宋，方正仿宋与Fandol仿宋
 });
 ```
 
 ### preserve
 
-The `preserve: boolean` option controls whether `fangsong` should be preserved in the transformed CSS output.
-Its default value is `true`
+`preserve: boolean` 选项控制通用字体族`fangsong`是否应该出现在转换的结果里，默认值为`true`。
 
 ```js
 postcssFontFangsong({
-  preserve: true, // preserve `fangsong` in the transpiled output
+  preserve: true, // 在转换结果中保留fangsong
 });
 ```
 
-When both `family` and `preserve` are specified, `preserve` is a no-op.
+注意，当`family`选项与`preserve`选项同时指定时，`preserve`选项将不起作用。
 
 [css-img]: https://csstools.github.io/cssdb/badge/fangsong-font-family.svg
 [css-url]: https://csstools.github.io/cssdb/#fangsong-font-family
