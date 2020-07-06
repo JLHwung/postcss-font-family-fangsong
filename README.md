@@ -9,13 +9,13 @@
 
 ```css
 body {
-  font: 100%/1.5 fangsong;
+  font: 16pt/28pt fangsong;
 }
 
 /* becomes */
 
 body {
-  font: 100%/1.5 fangsong, STFangsong, FangSong, FangSong_GB2312;
+  font: 16pt/28pt fangsong, STFangsong, FangSong, FangSong_GB2312;
 }
 ```
 

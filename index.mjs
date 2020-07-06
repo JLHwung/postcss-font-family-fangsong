@@ -8,7 +8,7 @@ export default postcss.plugin("postcss-font-family-fangsong", (opts) => {
 		let fangsongFamily = family;
 		if (typeof family === "string") {
 			fangsongFamily = family.trim().split(/\s*,\s*/);
-		} else {
+		} else if (!family) {
 			fangsongFamily = [
 				"STFangsong", // macOS, Office
 				"FangSong", // Windows NT 6.0+

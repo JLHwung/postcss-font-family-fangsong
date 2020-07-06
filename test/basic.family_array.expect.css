@@ -1,0 +1,10 @@
+test {
+	font: normal 16pt fangsong, FangSong, FZFangSong-Z02, FandolFang, STFangsong, sans-serif;
+	font: normal 22pt fangsong, FangSong, FZFangSong-Z02, FandolFang, sans-serif;
+	font: normal 14pt sans-serif;
+	font-family: fangsong, FangSong, FZFangSong-Z02, FandolFang, STFangsong, sans-serif;
+	font-family: fangsong, FangSong, FZFangSong-Z02, FandolFang, sans-serif;
+	font-family: fangsong, FangSong, FZFangSong-Z02, FandolFang;
+	font-family: sans-serif;
+	font-family: "FZFangSong-Z02",    fangsong, FangSong, FZFangSong-Z02, FandolFang,    sans-serif;
+}
