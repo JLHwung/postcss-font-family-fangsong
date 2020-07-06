@@ -1,0 +1,12 @@
+node_modules
+index.bundle.cjs
+package-lock.json
+*.log*
+*.result.css
+.*
+!.appveyor.yml
+!.editorconfig
+!.gitignore
+!.rollup.mjs
+!.tape.cjs
+!.travis.yml

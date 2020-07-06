@@ -1,0 +1,106 @@
+{
+  "name": "postcss-font-family-fangsong",
+  "version": "0.0.0",
+  "description": "Use the fangsong font family in CSS",
+  "author": "Jùnliàng Huáng<jlhwung@gmail.com>",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JLHwung/postcss-font-family-fangsong.git"
+  },
+  "homepage": "https://github.com/JLHwung/postcss-font-family-fangsong#readme",
+  "bugs": "https://github.com/JLHwung/postcss-font-family-fangsong/issues",
+  "main": "index.bundle.cjs",
+  "module": "index.mjs",
+  "type": "module",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.bundle.cjs"
+  },
+  "files": [
+    "index.mjs",
+    "index.bundle.cjs"
+  ],
+  "scripts": {
+    "build": "rollup -c .rollup.mjs --silent",
+    "check:ec": "echint --ignore index.bundle.cjs test",
+    "check:js": "eslint *.[cm]js --cache --ignore-path .gitignore --quiet",
+    "check:spelling": "yaspeller -c package.json --lang en --ignore-uppercase --ignore-roman-numerals --ignore-urls README.md",
+    "prepublishOnly": "npm test",
+    "pretest": "npm run build",
+    "check": "npm run check:js && npm run check:ec && npm run check:spelling",
+    "test": "echo 'Running tests...'; npm run check && npm run test:tape",
+    "test:tape": "postcss-tape --config .tape.cjs"
+  },
+  "dependencies": {
+    "browserslist": "^4.0.0",
+    "caniuse-lite": "^1.0.30000655",
+    "postcss": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "@rollup/plugin-babel": "5.0.4",
+    "ajv": "6.12.3",
+    "babel-eslint": "10.1.0",
+    "echint": "4.0.2",
+    "eslint": "7.4.0",
+    "eslint-config-dev": "2.0.0",
+    "postcss-tape": "4.0.0",
+    "pre-commit": "1.2.2",
+    "rollup": "2.19.0",
+    "yaspeller": "7.0.0"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "ua",
+    "user",
+    "agent",
+    "platform",
+    "fangsong",
+    "default",
+    "font",
+    "font-family",
+    "family",
+    "face",
+    "type",
+    "typeface"
+  ],
+  "yaspeller": {
+    "dictionary": [
+      "Affirmer",
+      "Affirmer's",
+      "babili",
+      "babelrc",
+      "browserslist",
+      "caniuse",
+      "devDependencies",
+      "env",
+      "es6",
+      "esm",
+      "fangsong",
+      "Gulpfile",
+      "Gruntfile",
+      "istanbul",
+      "js",
+      "lockfile",
+      "npm",
+      "nyc",
+      "postcss",
+      "PostCSS",
+      "polyfill",
+      "Refactors",
+      "rollup",
+      "sublicensable",
+      "ui",
+      "yaspeller",
+      "^[A-f0-9]{8}$"
+    ]
+  }
+}

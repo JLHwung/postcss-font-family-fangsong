@@ -1,0 +1,6 @@
+:root {
+	--primary-font-family: fangsong, STFangsong, FangSong, FangSong_GB2312, sans-serif;
+	--首要的字体族: fangsong, STFangsong, FangSong, FangSong_GB2312, sans-serif;
+	\002d\002Di-am-a-custom-property: fangsong, STFangsong, FangSong, FangSong_GB2312, sans-serif;
+	-i-am-not-a-custom-property: fangsong, sans-serif;
+}
