@@ -7,7 +7,7 @@ export default {
 		{ file: "dist/index.bundle.mjs", format: "es" },
 	],
 	plugins: [
-		babel.default({
+		babel({
 			babelHelpers: "bundled",
 		}),
 	],
