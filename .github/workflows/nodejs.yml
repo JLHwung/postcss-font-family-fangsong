@@ -1,6 +1,6 @@
 name: Node CI
 
-on: [push]
+on: push
 
 jobs:
   check-and-build:
@@ -42,8 +42,8 @@ jobs:
         id: test-dep-versions
         shell: bash
         run: |
-          echo "name=postcss-tape::$(node scripts/get-dev-deps postcss-tape)" >> "$GITHUB_OUTPUT"
-          echo "name=postcss::$(node scripts/get-dev-deps postcss)" >> "$GITHUB_OUTPUT"
+          echo "postcss-tape=$(node scripts/get-dev-deps postcss-tape)" >> "$GITHUB_OUTPUT"
+          echo "postcss=$(node scripts/get-dev-deps postcss)" >> "$GITHUB_OUTPUT"
       - name: yarn install
         run: |
           yarn add --dev postcss-tape@${{ steps.test-dep-versions.outputs.postcss-tape }} postcss@${{ steps.test-dep-versions.outputs.postcss }}
