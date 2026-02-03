@@ -133,6 +133,10 @@ postcssFontFangsong({
 
 When both `family` and `preserve` are specified, `preserve` is a no-op.
 
+---
+
+This project is tested with BrowserStack.
+
 [css-img]: https://csstools.github.io/cssdb/badge/fangsong-font-family.svg
 [css-url]: https://csstools.github.io/cssdb/#fangsong-font-family
 [npm-img]: https://img.shields.io/npm/v/postcss-font-family-fangsong.svg
