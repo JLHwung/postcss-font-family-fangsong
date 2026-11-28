@@ -28,7 +28,7 @@
     "test:tape": "postcss-tape --config .tape.cjs"
   },
   "devDependencies": {
-    "@babel/core": "7.29.13",
+    "@babel/core": "7.29.16",
     "@babel/eslint-parser": "7.29.13",
     "@babel/preset-env": "7.29.14",
     "@eslint/eslintrc": "3.3.7",
